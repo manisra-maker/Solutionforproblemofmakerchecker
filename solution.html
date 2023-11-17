@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="hidden" id="number" value="2" disabled>
+    <input type="hidden" id="total_chq" value="2" disabled>
+    <button type="button" onclick="numberIncrease()">+</button>
+    <button type="button" onclick="numberDecrease()">-</button>
+    <input type="text" id="makercheckertotal">
+    <script>
+        var globalMakerCheckerCount = 0;
+        var numberValue = document.getElementById('number');
+        var totalChqValue = document.getElementById('total_chq');
+        function numberIncrease() {
+            globalMakerCheckerCount = document.getElementById("makercheckertotal").value;
+            globalMakerCheckerCount++;
+            console.log('This is makerChecker Global count ' + globalMakerCheckerCount);
+            numberValue.value = globalMakerCheckerCount;
+            console.log(numberValue);
+        }
+        function numberDecrease() {
+            numberValue--;
+            totalChqValue--;
+            console.log('Value of #number:', numberValue);
+            console.log('Value of #total_chq:', totalChqValue);
+        }
+    </script>
+</body>
+
+</html>
